@@ -188,7 +188,7 @@
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#"><i class="fa fa-book pr-2"></i> Projects</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#"><i class="fa fa-power-off pr-2"></i> Logout</a>
+                                <a class="dropdown-item" href="<?php echo base_url() ?>auser/logout"><i class="fa fa-power-off pr-2"></i> Logout</a>
                             </div>
                         </div>
                     </div>
@@ -357,3 +357,7 @@
                 </div>
             </div>
             <!--Sidebar left-->
+
+            <?php if($this->session->flashdata('login_failed')):?>
+                <?php echo '<p class="alert alert-danger">' .$this->session->flashdata('login_failed').'</p>'?>
+            <?php endif; ?>

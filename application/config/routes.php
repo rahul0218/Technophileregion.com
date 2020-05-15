@@ -50,7 +50,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 //$route['admin'] = 'admin/apages/home';
-$route['admin'] = 'admin/view';
+
+$route['admin'] = 'auser/view';
+$route['admin/index'] = 'admin/view';
+$route['admin/(:any)']= 'auser/view';
 $route['default_controller'] = 'pages/view';
 
 $route['(:any)'] = 'pages/view/$1';

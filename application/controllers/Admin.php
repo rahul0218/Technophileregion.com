@@ -7,10 +7,15 @@
 
             $data['title'] = ucfirst($page);
 
+            if($this->session->userdata('logged_in')){
 
+             
             $this->load->view('admin/atemplates/header');
             //$this->load->view('admin/index');
             $this->load->view('admin/apages/'.$page, $data);
             $this->load->view('admin/atemplates/footer');
+            }
+           else if(!$this->session->userdata('logged_in'))
+                redirect('admin/login');
         }
     }
