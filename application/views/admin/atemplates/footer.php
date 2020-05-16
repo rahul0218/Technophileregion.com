@@ -2,7 +2,7 @@
 
 
     </div>
-
+  </div>
     <!--Page Wrapper-->
 
     <!-- Page JavaScript Files-->

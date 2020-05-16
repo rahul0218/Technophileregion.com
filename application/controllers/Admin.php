@@ -2,7 +2,8 @@
     class Admin extends CI_Controller{
         public function view($page = 'index'){
             if(!file_exists(APPPATH.'views/admin/apages/'.$page.'.php')){
-                show_404();
+              //  show_404();
+              echo "page not -- found";
             }
 
             $data['title'] = ucfirst($page);

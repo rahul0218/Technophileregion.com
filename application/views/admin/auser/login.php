@@ -1,3 +1,6 @@
+<?php if($this->session->flashdata('login_failed')):?>
+    <?php echo '<p class="alert alert-danger">' .$this->session->flashdata('login_failed').'</p>'?>
+<?php endif; ?>
 <?php if($this->session->userdata('logged_in')){
     redirect('admin/index');
 }
