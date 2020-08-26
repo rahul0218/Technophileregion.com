@@ -52,10 +52,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['admin/about'] = 'admin/view/about';
 $route['admin/home'] = 'admin/view/home';
 $route['admin/sub_admins'] = 'admin/view/sub_admins';
-$route['admin'] = 'auser/view';
+
+$route['admin'] = 'auser/view/login';
+
+$route['admin/login'] = 'auser/view/login';
+
 $route['admin/index'] = 'admin/view';
 
-//$route['admin/(:any)']= 'auser/view';
+$route['admin/(:any)']= 'auser/view';
 
 
 $route['default_controller'] = 'pages/view';

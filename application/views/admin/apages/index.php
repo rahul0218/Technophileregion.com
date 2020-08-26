@@ -3,6 +3,25 @@
 <!--Content right-->
 <div class="col-sm-9 col-xs-12 content pt-3 pl-0">
                 <h5 class="mb-3" ><strong>Dashboard</strong></h5>
+
+                <!--Login failed msg-->
+                <?php if($this->session->flashdata('user_loggedin')):?>
+                    
+                    <?php echo '<div class="alert alert-success alert-dismissible fade show" role="alert">'?>
+                        <?php echo    '<p>'?>
+                            <?php echo '<strong>' ?>
+                                <?php echo '<i class="fa fa-check"></i>'?>
+                                <?php echo  $this->session->flashdata('user_loggedin');?>
+                            <?php echo '</strong>' ?>
+                            check in.
+                        <?php echo    '</p>'?>
+                        <?php echo   '<button type="button" class="close" data-dismiss="alert" aria-label="Close">'?>
+                            <?php echo '<span aria-hidden="true">'?> &times;  <?php echo '</span>'?>
+                        <?php echo '</button>'?>
+                    <?php echo '</div>'?>
+
+                <?php endif; ?>
+                <!--Login failed msg-->
                 
                 
                 <!--Dashboard widget-->

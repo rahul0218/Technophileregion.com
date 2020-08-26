@@ -1,0 +1,1 @@
+This project will work if you import this(named technophileregion) database in phpmyadmin.

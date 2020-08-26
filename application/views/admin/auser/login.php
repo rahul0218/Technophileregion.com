@@ -1,6 +1,3 @@
-<?php if($this->session->flashdata('login_failed')):?>
-    <?php echo '<p class="alert alert-danger">' .$this->session->flashdata('login_failed').'</p>'?>
-<?php endif; ?>
 <?php if($this->session->userdata('logged_in')){
     redirect('admin/index');
 }
@@ -34,6 +31,27 @@ else{
     <![endif]-->
 
     <title>Admin</title>
+
+
+<!--Login failed msg-->
+<?php if($this->session->flashdata('login_failed')):?>
+    
+    <?php echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">'?>
+        <?php echo    '<p>'?>
+            <?php echo '<strong>' ?>
+                <?php echo '<i class="fa fa-times"></i>'?>
+                <?php echo  $this->session->flashdata('login_failed');?>
+            <?php echo '</strong>' ?>
+            check in.
+        <?php echo    '</p>'?>
+        <?php echo   '<button type="button" class="close" data-dismiss="alert" aria-label="Close">'?>
+            <?php echo '<span aria-hidden="true">'?> &times;  <?php echo '</span>'?>
+        <?php echo '</button>'?>
+    <?php echo '</div>'?>
+
+<?php endif; ?>
+<!--Login failed msg-->
+
   </head>
 
   <body class="login-body">
